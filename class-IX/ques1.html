@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Number</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://imbinit17.github.io/Coding-School/class-IX/style.css">
+    <link rel="shortcut icon" href="https://imbinit17.github.io/Coding-School/images/Favicon.ico.jpg" type="image/x-icon" />
+</head>
+<body>
+    <nav>
+        <div class="logo">
+           Coding School
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+           <li><a href="https://imbinit17.github.io/Coding-School/index.html">Home</a></li>
+           <li><a class="active" href="https://imbinit17.github.io/Coding-School/class-IX.html">Class IX</a></li>
+           <li><a href="https://imbinit17.github.io/Coding-School/class-X.html">Class X</a></li>
+           <li><a href="https://imbinit17.github.io/Coding-School/class-XI.html">Class XI</a></li>
+           <li><a href="https://imbinit17.github.io/Coding-School/about-us.html">About Us</a></li>
+        </ul>
+     </nav>
+
+     <div class="ques-section">
+       <p1> Question 1 :</p1>
+       <p>Write a program to accept a number and check whether a number is palindrome or not</p>
+     </div>
+     <div class="explanation">
+        <p>Explanation :</p>
+        <p>A palindrome Number is a number which on reversing is the same as its previous self . <br>
+            Let's consider a number : 121 <br>
+            Now if we reverse it , it is the same as before . 
+        </p>
+     </div>
+     <div class="answer-section">
+        <div class="codeblock">
+           <pre>
+<code>
+import java.util.*;
+class palindrome
+{
+    public static void main(String h[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number");
+        int num=sc.nextInt();
+        
+        int temp=num;
+        int newNum=0 ;
+        
+        int d;
+        while(temp>0)
+        {
+            d=temp%10;
+            newNum=(newNum*10)+d;
+            temp=temp/10;
+        }
+    
+    
+        if(newNum==num)
+        {
+            System.out.println(num+" is 
+            a palindrome number");      
+        }
+        else 
+        {
+            System.out.println(num+" is not a 
+            palindrome number");
+        }
+    }
+}          
+</code>
+           </pre>
+        </div>
+    </div>
+           <div class="output">
+            <img src="https://imbinit17.github.io/Coding-School/class-IX/img/output/output1.jpg" alt="output">
+           </div>
+
+       <div class="credits">
+        <h2>Contribution by :-</h2>
+        <div class="name-img">
+            <img src="https://imbinit17.github.io/Coding-School/images/abhishek.jpg" alt="Abhishek Image">
+            <p><a href="https://twitter.com/AMAbhishekRaj1"> Abhishek Raj</a> </p>
+        </div>
+       </div>
+
+       <footer>
+        <p>Coding School    ||        First Release 2022</p>
+       </footer>
+</body>
+</html>
